@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route,Switch,Redirect} from 'react-router-dom';
+import Index from './pages/Index';
+import Cinima from './pages/Cinima';
+import Center from './pages/Center';
+import Nav from './pages/Nav';
+import City from "./pages/City";
 
-function App() {
+class App extends React.Component{
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Switch>
+        <Route path="/index" exact component={Index}></Route>
+        <Route path="/cinima" exact component={Cinima}></Route>
+        <Route path="/center" exact component={Center}></Route>
+        <Route path="/city" component={City}></Route>
+        <Route path="/" component={Index}></Route>
+    </Switch>
+      <Nav></Nav>
     </div>
   );
+  }
 }
-
 export default App;

@@ -1,0 +1,49 @@
+.top{
+    position: fixed;
+    width:100%;
+    height:50px;
+    top:0;
+    left:0;
+    right:0;
+    .left{
+        float:left;
+        width:40%;
+        height:100%;
+        position:relative;
+        img{
+            width:25px;
+            height:25px;
+            position:absolute;
+            left:10px;
+            top:12px;
+        }
+        a{
+            display: inline-block;
+            color: #333;
+            font-weight: 700;
+            font-size: 14px;
+            width: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position:absolute;
+            left:35px;
+            top:17px;
+        }
+    }
+    .right{
+        float:right;
+        width:60%;
+        height:100%;
+        li{
+            float:left;
+            width:50%;
+            height:50px;
+            line-height:50px;
+            font-size: 18px;
+            text-align: center;
+            color:#ff4d64;
+            font-weight: 700;
+        }
+    }
+}
